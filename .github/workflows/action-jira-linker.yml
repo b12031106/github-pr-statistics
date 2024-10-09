@@ -1,0 +1,20 @@
+name: action-jira-linker
+on: [pull_request]
+
+jobs:
+  action-jira-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: exogee-technology/action-jira-linker@v1.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          jira-user: ${{ secrets.JIRA_USER }}
+          jira-token: ${{ secrets.JIRA_TOKEN }}
+          jira-base-url: https://justinhsu-b.atlassian.net/
+          comment-header: |
+            ## JIRA Information
+            ---
+            Stuff and things
+          comment-trailer: |
+            If you cannot access the link above contact [admin@testcompany.com](mailto:admin@testcompany.com) for more information.
+          fail-on-error: true
