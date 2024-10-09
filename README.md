@@ -11,3 +11,5 @@ node index.js {organization} {repository name}
 // example
 node index.js b12031106 github-pr-statistics
 ``` 
+
+SUSHI GLORY HOLE
